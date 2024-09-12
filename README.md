@@ -1,11 +1,11 @@
 # Projeto Moto Lazer
 
-<span style="background-color: lightblue;">Este README está em desenvolvimento. Mais detalhes serão adicionados conforme o escopo do projeto for definido.</span>
+_**Este README está em desenvolvimento. Mais detalhes serão adicionados conforme o escopo do projeto for definido.**_
 
-<span style="background-color: lightblue;">Para mais informações sobre a empresa responsável pelo projeto, consulte o arquivo [`empresa/README.md`](empresa/README.md).</span>
+_**Para mais informações sobre a empresa responsável pelo projeto, consulte o arquivo [`empresa/README.md`](empresa/README.md).**_
 
 ## Visão Geral
-O projeto **Moto Lazer** visa [descrever brevemente o objetivo do projeto]. Este projeto está em fase inicial, com foco em [explique brevemente o propósito principal do projeto].
+Esta é uma aplicação que visa [adicionar objetivo principal conforme definição de escopo]
 
 ## Funcionalidades
 As funcionalidades previstas para este projeto incluem:
@@ -16,11 +16,13 @@ As funcionalidades previstas para este projeto incluem:
 ## Pré-requisitos
 A ser definido conforme a escolha da tecnologia e das dependências.
 
-## Instalação
-A ser definido após a escolha da stack tecnológica.
+## Tecnologias e Instalação
+### Tecnologias
+- PHP
+- MySQL
 
-## Uso
-A ser detalhado conforme o projeto evoluir.
+### Instalação
+A ser definido após a escolha da stack tecnológica.
 
 ## Melhorias Futuras
 As seguintes funcionalidades estão sendo planejadas para implementação nas próximas fases do projeto:
