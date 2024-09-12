@@ -1,5 +1,3 @@
-# Projeto Integrado Segundo Semestre - Grupo 5
- 
 ## Apresentação da Empresa
  
 **Web Tech** é uma empresa especializada no desenvolvimento de soluções tecnológicas para otimizar e automatizar operações de negócios. Nosso foco é criar sistemas personalizados que atendam às necessidades específicas de empresas terceiras, visando melhorar a eficiência operacional e a qualidade dos serviços prestados. Com uma equipe altamente qualificada e dedicada, a Web Tech oferece uma ampla gama de serviços de software, desde a concepção e desenvolvimento até a implementação e suporte contínuo.
