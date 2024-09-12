@@ -1,4 +1,4 @@
-# Projeto Moto Lazer
+# Projeto Integrado Segundo Semestre - Grupo 5 (Moto Lazer)
 
 _**Este README está em desenvolvimento. Mais detalhes serão adicionados conforme o escopo do projeto for definido.**_
 
