@@ -15,7 +15,7 @@ class Connection {
                 )
             );
         } catch(PDOException $e) {
-            die("Erro na conexão com o banco de dados: " . $e->getMessage());
+            die("Erro na conexão com o banco de dadoss: " . $e->getMessage());
         }
     }
 
