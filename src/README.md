@@ -1,6 +1,6 @@
 # Projeto Integrado Segundo Semestre - Grupo 5 (Moto Lazer)
 
-_**Este README está em desenvolvimento. Mais detalhes serão adicionados conforme o escopo do projeto for definido.**_
+_**Sistema de Gerenciamento Moto Lazer**_
 
 _**Para mais informações sobre a empresa responsável pelo projeto, consulte o arquivo [`empresa/README.md`](empresa/README.md).**_
 
