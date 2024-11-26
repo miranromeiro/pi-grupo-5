@@ -13,6 +13,7 @@ $validador->verificar_logado();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulário de Agendamento</title>
+    <link rel="stylesheet" href="../assets/styles.css?v=1.0">
 </head>
 <body>
     <?php
@@ -20,7 +21,8 @@ $validador->verificar_logado();
     include "../controllers/menu.php";
     
     ?>
-    <h1>Agendamento de Serviço</h1>
+    <h1>AGENDAR</h1>
+    
     <form action="../controllers/processaAgendamentos.php" method="POST">
         <label for="nome">Nome:</label><br>
         <input type="text" id="nome" name="nome" required><br><br>
@@ -40,7 +42,7 @@ $validador->verificar_logado();
         <label for="descricao_problema">Descrição do Problema:</label><br>
         <textarea id="descricao_problema" name="descricao_problema" rows="4" cols="50" required></textarea><br><br>
 
-        <button type="submit">Finalizar</button>
+        <input type="submit" value="Finalizar">
     </form>
 </body>
 </html>

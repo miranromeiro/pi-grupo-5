@@ -81,7 +81,7 @@ class Usuario
     session_destroy();
 
     // Opcional: Redireciona para uma página de login ou inicial
-    header("Location: index.php");
+    header("Location: login-privado.php");
     exit();
 }
 
@@ -110,7 +110,7 @@ public function logout_invasor() {
 
     session_start();
     $_SESSION['message'] = "Faça login antes de acessar qualquer página.";
-    header("Location: index.php");
+    header("Location: login-privado.php");
     exit();
 } 
 

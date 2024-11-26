@@ -12,8 +12,9 @@ $validador->verificar_logado();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
+    <title>inicio</title>
+    <link rel="stylesheet" href="../assets/styles.css?v=1.0">
+    </head>
 <body>
     <?php
        include "../controllers/menu.php";
