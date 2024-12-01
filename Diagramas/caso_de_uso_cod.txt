@@ -1,0 +1,36 @@
+@startuml
+ 
+left to right direction
+ 
+actor Funcionário as f
+actor ADM as a
+ 
+package Autenticação {
+  usecase "Realiza login" as UC1
+}
+ 
+package Agendamento {
+  usecase "Realiza agendamento" as UC2
+  usecase "Atualiza agendamento" as UC3
+  usecase "Visualiza agendamento" as UC4
+}
+ 
+package Produtos {
+  usecase "Visualiza produto" as UC5
+  usecase "Vende produto" as UC6
+  usecase "Adiciona produto ao estoque" as UC7
+  usecase "Retira produto do estoque" as UC8
+}
+ 
+f --> Autenticação
+f --> UC5
+f --> UC6
+(Autenticação) <-- a
+(Agendamento) <-- a
+(Produtos) <-- a
+ 
+(UC4) .> (UC2) : extends
+ 
+(UC6) .> (UC8) : include
+ 
+@enduml

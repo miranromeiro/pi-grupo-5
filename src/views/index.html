@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Menu com Carrossel</title>
+  <link rel="stylesheet" href="../assets/styles.css">
+</head>
+<body>
+  <!-- Menu -->
+  <header class="menu">
+    <div class="logo">
+      <img src="../assets/img/logo/logo_maior.png">
+    </div>
+    <div class="contacts">
+      <div class="contacts_whatsapp"> 
+        <img src="../assets/img/icones_comuns/icons8-whatsapp-48.png">
+        <p>+55 11 91234-5678</p>
+      </div>
+      <div class="contacts_phone">
+        <img src="../assets/img/icones_comuns/icons8-phone-48.png">
+      <p>+55 11 3456-7890</p>
+      </div>
+    </div>
+    
+  </header>
+
+  <!-- Espaço para o carrossel -->
+  <section class="carousel-container">
+    <div class="carousel">
+      <div class="carousel-item"><img src="../assets/img/outras_imagens/OFICINA1.jpg" alt="Imagem 1"></div>
+      <div class="carousel-item"><img src="../assets/img/outras_imagens/OFICINA2.jpg" alt="Imagem 2"></div>
+      <div class="carousel-item"><img src="../assets/img/outras_imagens/OFICINA3.jpg" alt="Imagem 3"></div>
+    </div>
+    <button class=" bt_button prev" onclick="prevSlide()">&#10094;</button>
+    <button class="bt_button next" onclick="nextSlide()">&#10095;</button>
+  </section>
+
+  <!-- Espaço para as marcas que trabalhamos -->
+   <div class="caixa_marcas">
+     <div class="caixa_marcas_titulo">
+       <h1>MARCAS QUE TRABALHAMOS</h1>
+     </div>
+     <div class="caixa_marcas_carousel">
+       <div class="marcas"><img src="../assets/img/honda.png" ></div>
+       <div class="marcas"><img src="../assets/img/yamaha.png" ></div>
+       <div class="marcas"><img src="../assets/img/suzuki.png" ></div>
+       <div class="marcas"><img src="../assets/img/shineray.png" ></div>
+     </div>
+   </div>
+
+
+  <!-- Espaço para os produtos -->
+   <div class="caixa_principal_produtos">
+    <div class="caixa_filha_titulo">
+      <h1>ALGUNS DE NOSSOS PRODUTOS</h1>
+    </div>
+    <div class="caixa_filha_cards_produtos">
+      <div class="card">
+        <img src="../assets/img/pneus.webp" >
+        <h3>titulo</h3>
+        <p>caracteristica 1</p>
+        <p>caracteristica 2</p>
+      </div>
+      <div class="card">
+        <img src="../assets/img/pneus.webp" >
+        <h3>titulo</h3>
+        <p>caracteristica 1</p>
+        <p>caracteristica 2</p>
+      </div>
+      <div class="card">
+        <img src="../assets/img/pneus.webp" >
+        <h3>titulo</h3>
+        <p>caracteristica 1</p>
+        <p>caracteristica 2</p>
+      </div>
+      <div class="card">
+        <img src="../assets/img/pneus.webp" >
+        <h3>titulo</h3>
+        <p>caracteristica 1</p>
+        <p>caracteristica 2</p>
+      </div>
+      <div class="card">
+        <img src="../assets/img/pneus.webp" >
+        <h3>titulo</h3>
+        <p>caracteristica 1</p>
+        <p>caracteristica 2</p>
+      </div>
+      <div class="card">
+        <img src="../assets/img/pneus.webp" >
+        <h3>titulo</h3>
+        <p>caracteristica 1</p>
+        <p>caracteristica 2</p>
+      </div>
+      <div class="card">
+        <img src="../assets/img/pneus.webp" >
+        <h3>titulo</h3>
+        <p>caracteristica 1</p>
+        <p>caracteristica 2</p>
+      </div>
+      <div class="card">
+        <img src="../assets/img/pneus.webp" >
+        <h3>titulo</h3>
+        <p>caracteristica 1</p>
+        <p>caracteristica 2</p>
+      </div>
+      <div class="card">
+        <img src="../assets/img/pneus.webp" >
+        <h3>titulo</h3>
+        <p>caracteristica 1</p>
+        <p>caracteristica 2</p>
+      </div>
+      <div class="card">
+        <img src="../assets/img/pneus.webp" >
+        <h3>titulo</h3>
+        <p>caracteristica 1</p>
+        <p>caracteristica 2</p>
+      </div>
+
+      <!-- serviços -->
+
+       <div class="caixa_principal_servicos">
+         <div class="caixa_servicos_titulo">
+           <h1>SERVIÇOS</h1>
+         </div>
+         <div class="caixa_exemplo_sevicos">
+           <div class="conteiner_servicos_circulo_texto">
+             <div class="circulo_servico">
+              <img src="../assets/img/icones_servicos/disco_freio/icons8-discos-de-freio-100.png">
+             </div>
+             <div class="texto_servico">
+              <p>Troca de pastilhas de freio e lonas</p>
+             </div>
+           </div>
+           <div class="conteiner_servicos_circulo_texto">
+             <div class="circulo_servico">
+              <img src="../assets/img/icones_servicos/bateria/icons8-bateria-de-carro-96.png">
+             </div>
+             <div class="texto_servico">
+              <p>Carregamento e troca de baterias</p>
+             </div>
+           </div>
+           <div class="conteiner_servicos_circulo_texto">
+             <div class="circulo_servico">
+              <img src="../assets/img/icones_servicos/capacete/icons8-motorbike-helmet-96.png">
+             </div>
+             <div class="texto_servico">
+              <p>Troca de viseira de capacetes</p>
+             </div>
+           </div>
+           <div class="conteiner_servicos_circulo_texto">
+             <div class="circulo_servico">
+              <img src="../assets/img/icones_servicos/coroa/icons8-engineering-96.png">
+             </div>
+             <div class="texto_servico">
+              <p>Troca e regulagem de transmição</p>
+             </div>
+           </div>
+           <div class="conteiner_servicos_circulo_texto">
+             <div class="circulo_servico">
+              <img src="../assets/img/icones_servicos/farou/icons8-headlight-96.png">
+             </div>
+             <div class="texto_servico">
+              <p>Troca de lampada de farou e setas</p>
+             </div>
+           </div>
+           <div class="conteiner_servicos_circulo_texto">
+             <div class="circulo_servico">
+              <img src="../assets/img/icones_servicos/manutencao/icons8-maintenance-100.png">
+             </div>
+             <div class="texto_servico">
+              <p>Revisões em geral</p>
+             </div>
+           </div>
+           <div class="conteiner_servicos_circulo_texto">
+             <div class="circulo_servico">
+              <img src="../assets/img/icones_servicos/motor/icons8-engine-100.png">
+             </div>
+             <div class="texto_servico">
+              <p>Manutenção completa de motores</p>
+             </div>
+           </div>
+           <div class="conteiner_servicos_circulo_texto">
+             <div class="circulo_servico">
+              <img src="../assets/img/icones_servicos/oleo/icons8-engine-oil-96.png">
+             </div>
+             <div class="texto_servico">
+              <p>Troca de oleo</p>
+             </div>
+           </div>
+           <div class="conteiner_servicos_circulo_texto">
+             <div class="circulo_servico">
+              <img src="../assets/img/icones_servicos/pneu/icons8-flat-tire-96.png">
+             </div>
+             <div class="texto_servico">
+              <p>Troca de de pneus</p>
+             </div>
+           </div>
+           <div class="conteiner_servicos_circulo_texto">
+             <div class="circulo_servico">
+              <img src="../assets/img/icones_servicos/vela/icons8-spark-plug-96.png">
+             </div>
+             <div class="texto_servico">
+              <p>Troca ou limpeza de vela de ignição</p>
+             </div>
+           </div>
+         </div>
+       </div>
+
+       <!-- localização-->
+        <div class="caixa_principal_localizacao">
+          <div class="caixa_localizacao_titulo">
+            <h1>NOSSA LOCALIZAÇÃO</h1>
+          </div>
+          <div class="caixa_localizacao_informacoes">
+            <div class="informacoes_endereco">
+              <img src="../assets/img/icones_comuns/icons8-localização-48.png">
+              <h4>Av.Loreto, 914</h4>
+            </div>
+            <div class="informacoes_horarios">
+              <img src="../assets/img/icones_comuns/icons8-relógio-50.png">
+              <h4>8h AS 18h</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- google maps -->
+         <div class="caixa_principal_maps">
+          <div class="caixa_maps_titulo">
+            <h2>NOSSA LOCALIZAÇÃO</h2>
+          </div>
+          <div class="caixa_mapa_link">
+            <a href="https://maps.app.goo.gl/x6Mxjz2NNyDabVTH6" target="_blank" class="map-link">
+              <img src="../assets/img/outras_imagens/Sem título.png" alt="Capa do local">
+            </a>
+          </div>
+         </div>
+
+         <!-- roda pé-->
+          <div class="roda_pe">
+            <img src="../assets/img/logo/logo_maior.png" alt="">
+            <h2>MOTO LAZER</h2>
+            <div class="caixa_icon_roda">
+              <img src="../assets/img/icones_comuns/icons8-phone-48.png">
+              <h4>+55 11 3456-7890</h4>
+            </div>
+            <div class="caixa_icon_roda">
+              <img src="../assets/img/icones_comuns/icons8-whatsapp-48.png">
+              <h4>+55 11 91234-5678</h4>
+            </div>
+            <div class="caixa_icon_roda">
+              <img src="../assets/img/icones_comuns/icons8-instagram-48.png">
+              <h4>@motolazer</h4>
+            </div>
+            <h3>QUALIDADE, VELOCIDADE E HONESTIDADE</h3>
+            <h4>TUDO EM UM MESMO LUGAR</h4>
+            <h5>DESDE 1979</h5>
+          </div>
+    </div>
+   </div>
+  
+
+
+  <script src="../assets/js/script.js"></script>
+</body>
+</html>
