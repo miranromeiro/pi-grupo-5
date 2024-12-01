@@ -30,7 +30,7 @@ class Agendamento
 
             // Executar a query
             if ($stmt->execute()) {
-                return "Agendamento realizado com sucesso!";
+               // return "Agendamento realizado com sucesso!";
             } else {
                 return "Falha ao realizar o agendamento.";
             }

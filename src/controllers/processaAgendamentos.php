@@ -24,7 +24,8 @@ try {
 
         // Chama o método agendar e exibe a mensagem
         $mensagem = $agendamento->agendar($dados);
-        echo $mensagem;
+        //echo $mensagem;
+        header("location:../views/agendados.php");
     } else {
         echo "Formulário não enviado.";
     }

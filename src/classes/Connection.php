@@ -14,7 +14,7 @@ class Connection
         try {
             $this->connection = new PDO("mysql:host={$this->host};dbname={$this->dbname}", $this->user, $this->password);
             $this->connection->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            echo "Conexão com o banco de dados bem-sucedida!";
+            //echo "Conexão com o banco de dados bem-sucedida!";
         } catch (PDOException $e) {
             echo "Erro ao conectar ao banco de dados: " . $e->getMessage();
         }
@@ -30,7 +30,7 @@ class Connection
     public function __destruct()
     {
         $this->connection = null;
-        echo "\nConexão com o banco de dados encerrada.";
+       // echo "\nConexão com o banco de dados encerrada.";
     }
 }
 
