@@ -1,3 +1,36 @@
+<?php
+require '../../classes/Connection.php';
+require '../../classes/Produto.php';
+
+if (!isset($_GET['id'])) {
+    header("Location: listar_produtos.php?erro=ID não fornecido");
+    exit();
+}
+
+try {
+    // Inicializa conexão
+    $connection = new Connection();
+    $conn = $connection->getConnection();
+
+    // Obtém o ID do produto
+    $id = intval($_GET['id']);
+
+    // Busca produto pelo ID usando consulta parametrizada
+    $sql = "SELECT * FROM produtos WHERE id = ?";
+    $stmt = $conn->prepare($sql);
+    $stmt->execute([$id]);
+    $produto = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    if (!$produto) {
+        header("Location: listar_produtos.php?erro=Produto não encontrado");
+        exit();
+    }
+} catch (PDOException $e) {
+    header("Location: listar_produtos.php?erro=Erro ao conectar ao banco de dados");
+    exit();
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,28 +39,6 @@
 </head>
 <body>
     <div class="container">
-        <?php
-        include '../../controllers/conexao.php';
-        
-        if (!isset($_GET['id'])) {
-            header("Location: listar_produtos.php?erro=ID não fornecido");
-            exit();
-        }
-        
-        $id = intval($_GET['id']);
-        $sql = "SELECT * FROM produtos WHERE id = ?";
-        $stmt = $conn->prepare($sql);
-        $stmt->bind_param("i", $id);
-        $stmt->execute();
-        $result = $stmt->get_result();
-        $produto = $result->fetch_assoc();
-        
-        if (!$produto) {
-            header("Location: listar_produtos.php?erro=Produto não encontrado");
-            exit();
-        }
-        ?>
-
         <h1>Editar Produto</h1>
         
         <?php if (isset($_GET['erro'])): ?>
@@ -38,8 +49,8 @@
 
         <form method="post" action="../../controllers/processar_produto.php">
             <input type="hidden" name="acao" value="editar">
-            <input type="hidden" name="id" value="<?php echo $produto['id']; ?>">
-            
+            <input type="hidden" name="id" value="<?php echo htmlspecialchars($produto['id']); ?>">
+
             <div class="form-group">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" value="<?php echo htmlspecialchars($produto['nome']); ?>" required>
@@ -67,21 +78,21 @@
 
             <div class="form-group">
                 <label for="preco_compra">Preço de Compra:</label>
-                <input type="number" name="preco_compra" id="preco_compra" step="0.01" value="<?php echo $produto['preco_compra']; ?>" required>
+                <input type="number" name="preco_compra" id="preco_compra" step="0.01" value="<?php echo htmlspecialchars($produto['preco_compra']); ?>" required>
             </div>
 
             <div class="form-group">
                 <label for="preco_venda">Preço de Venda:</label>
-                <input type="number" name="preco_venda" id="preco_venda" step="0.01" value="<?php echo $produto['preco_venda']; ?>" required>
+                <input type="number" name="preco_venda" id="preco_venda" step="0.01" value="<?php echo htmlspecialchars($produto['preco_venda']); ?>" required>
             </div>
 
             <div class="form-group">
                 <label for="quantidade_estoque">Quantidade em Estoque:</label>
-                <input type="number" name="quantidade_estoque" id="quantidade_estoque" value="<?php echo $produto['quantidade_estoque']; ?>" required>
+                <input type="number" name="quantidade_estoque" id="quantidade_estoque" value="<?php echo htmlspecialchars($produto['quantidade_estoque']); ?>" required>
             </div>
 
             <button type="submit" class="btn btn-primary">Salvar Alterações</button>
-            <a href="listar.php" class="btn">Cancelar</a>
+            <a href="listar_produtos.php" class="btn">Cancelar</a>
         </form>
     </div>
 </body>

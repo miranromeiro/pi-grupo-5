@@ -1,10 +1,16 @@
 <?php
-include '../../controllers/conexao.php';
+require '../../classes/Connection.php';
+require '../../classes/Produto.php';
+
+$connection = new Connection();
+$conn = $connection->getConnection();
 
 $sql = "SELECT * FROM produtos ORDER BY id DESC";
-$result = $conn->query($sql);
+$stmt = $conn->prepare($sql);
+$stmt->execute();
+$result = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-$mensagem = isset($_GET['mensagem']) ? $_GET['mensagem'] : '';
+$mensagem = isset($_GET['mensagem']) ? htmlspecialchars($_GET['mensagem']) : '';
 ?>
 
 <!DOCTYPE html>
@@ -19,13 +25,13 @@ $mensagem = isset($_GET['mensagem']) ? $_GET['mensagem'] : '';
         
         <?php if ($mensagem): ?>
             <div class="mensagem sucesso">
-                <?php echo htmlspecialchars($mensagem); ?>
+                <?php echo $mensagem; ?>
             </div>
         <?php endif; ?>
 
         <a href="inserir.php" class="btn btn-primary">Novo Produto</a>
 
-        <?php if ($result->num_rows > 0): ?>
+        <?php if (!empty($result)): ?>
             <table class="produto-table">
                 <thead>
                     <tr>
@@ -40,7 +46,7 @@ $mensagem = isset($_GET['mensagem']) ? $_GET['mensagem'] : '';
                     </tr>
                 </thead>
                 <tbody>
-                    <?php while($row = $result->fetch_assoc()): ?>
+                    <?php foreach ($result as $row): ?>
                         <tr>
                             <td><?php echo htmlspecialchars($row["id"]); ?></td>
                             <td><?php echo htmlspecialchars($row["nome"]); ?></td>
@@ -54,7 +60,7 @@ $mensagem = isset($_GET['mensagem']) ? $_GET['mensagem'] : '';
                                 <a href="#" onclick="confirmarExclusao(<?php echo $row['id']; ?>)" class="btn btn-danger">Excluir</a>
                             </td>
                         </tr>
-                    <?php endwhile; ?>
+                    <?php endforeach; ?>
                 </tbody>
             </table>
         <?php else: ?>
@@ -67,6 +73,6 @@ $mensagem = isset($_GET['mensagem']) ? $_GET['mensagem'] : '';
                 window.location.href = '../../controllers/processar_produto.php?acao=excluir&id=' + id;
             }
         }
-</script>
+    </script>
 </body>
 </html>

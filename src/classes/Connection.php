@@ -3,9 +3,9 @@
 class Connection
 {
     private $host = 'localhost';
-    private $dbname = 'moto_lazer';
-    private $user = 'root';
-    private $password = '';
+    private $dbname = 'moto_lazer_db';
+    private $user = 'moto_lazer_admin';
+    private $password = 'abc123';
     private $connection;
 
     // Construtor: Estabelece a conexão com o banco de dados
