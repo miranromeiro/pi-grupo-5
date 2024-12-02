@@ -14,7 +14,7 @@
             </div>
         <?php endif; ?>
 
-        <form method="post" action="../controllers/processar_produto.php">
+        <form method="post" action="../../controllers/processar_produto.php">
             <div class="form-group">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" required>

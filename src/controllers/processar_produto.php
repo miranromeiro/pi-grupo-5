@@ -23,9 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                          $preco_compra, $preco_venda, $quantidade_estoque, $id);
         
         if ($stmt->execute()) {
-            header("Location: ../views/listar.php?mensagem=Produto atualizado com sucesso!");
+            header("Location: ../views/estoque/listar_produtos.php?mensagem=Produto atualizado com sucesso!");
         } else {
-            header("Location: ../views/editar.php?id=$id&erro=Erro ao atualizar produto");
+            header("Location: ../views/estoque/editar.php?id=$id&erro=Erro ao atualizar produto");
         }
     } else {
         $sql = "INSERT INTO produtos (nome, marca, modelo, aplicacao, descricao, preco_compra, 
@@ -36,9 +36,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                          $preco_compra, $preco_venda, $quantidade_estoque);
         
         if ($stmt->execute()) {
-            header("Location: ../views/listar.php?mensagem=Produto cadastrado com sucesso!");
+            header("Location: ../views/estoque/listar_produtos.php?mensagem=Produto cadastrado com sucesso!");
         } else {
-            header("Location: ../views/inserir.php?erro=Erro ao cadastrar produto");
+            header("Location: ../views/estoque?inserir.php?erro=Erro ao cadastrar produto");
         }
     }
     
@@ -51,9 +51,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $stmt->bind_param("i", $id);
     
     if ($stmt->execute()) {
-        header("Location: ../views/listar.php?mensagem=Produto excluído com sucesso!");
+        header("Location: ../views/estoque/listar_produtos.php?mensagem=Produto excluído com sucesso!");
     } else {
-        header("Location: ../views/listar.php?erro=Erro ao excluir produto");
+        header("Location: ../views/estoque/listar_produtos.php?erro=Erro ao excluir produto");
     }
     
     $stmt->close();

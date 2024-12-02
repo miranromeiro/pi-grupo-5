@@ -7,10 +7,10 @@
 <body>
     <div class="container">
         <?php
-        include '../controllers/conexao.php';
+        include '../../controllers/conexao.php';
         
         if (!isset($_GET['id'])) {
-            header("Location: listar.php?erro=ID não fornecido");
+            header("Location: listar_produtos.php?erro=ID não fornecido");
             exit();
         }
         
@@ -23,7 +23,7 @@
         $produto = $result->fetch_assoc();
         
         if (!$produto) {
-            header("Location: listar.php?erro=Produto não encontrado");
+            header("Location: listar_produtos.php?erro=Produto não encontrado");
             exit();
         }
         ?>
@@ -36,7 +36,7 @@
             </div>
         <?php endif; ?>
 
-        <form method="post" action="../controllers/processar_produto.php">
+        <form method="post" action="../../controllers/processar_produto.php">
             <input type="hidden" name="acao" value="editar">
             <input type="hidden" name="id" value="<?php echo $produto['id']; ?>">
             

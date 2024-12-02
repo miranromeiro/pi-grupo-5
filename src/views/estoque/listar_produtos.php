@@ -1,5 +1,5 @@
 <?php
-include '../controllers/conexao.php';
+include '../../controllers/conexao.php';
 
 $sql = "SELECT * FROM produtos ORDER BY id DESC";
 $result = $conn->query($sql);
@@ -64,7 +64,7 @@ $mensagem = isset($_GET['mensagem']) ? $_GET['mensagem'] : '';
     <script>
         function confirmarExclusao(id) {
             if (confirm('Tem certeza que deseja excluir este produto?')) {
-                window.location.href = '../controllers/processar_produto.php?acao=excluir&id=' + id;
+                window.location.href = '../../controllers/processar_produto.php?acao=excluir&id=' + id;
             }
         }
 </script>
