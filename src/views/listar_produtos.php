@@ -1,9 +1,13 @@
 <?php
+require '../classes/Usuario.php';
 require '../classes/Connection.php';
 require '../classes/Produto.php';
 
-$connection = new Connection();
-$conn = $connection->getConnection();
+$db = new Connection();
+$conn = $db->getConnection();
+
+$usuario = new Usuario($db->getConnection());
+$usuario->verificar_logado();
 
 $sql = "SELECT * FROM produtos ORDER BY id DESC";
 $stmt = $conn->prepare($sql);
@@ -23,10 +27,10 @@ $mensagem = isset($_GET['mensagem']) ? htmlspecialchars($_GET['mensagem']) : '';
     <?php include '../controllers/menu.php'; ?>
 
     <div class="container">
-        <h1>Estoque de Produtos</h1>
+        <h1 style="text-align: center;">Estoque de Produtos</h1>
         
         <?php if ($mensagem): ?>
-            <div class="mensagem sucesso"><?php echo $mensagem; ?></div>
+            <div class=".mensagem .sucesso"><?php echo $mensagem; ?></div>
         <?php endif; ?>
 
         <a href="inserir.php" class="btn btn-primary">Novo Produto</a>
@@ -64,7 +68,7 @@ $mensagem = isset($_GET['mensagem']) ? htmlspecialchars($_GET['mensagem']) : '';
                 </tbody>
             </table>
         <?php else: ?>
-            <p>Nenhum produto cadastrado.</p>
+            <p style="text-align: center;">Nenhum produto cadastrado.</p>
         <?php endif; ?>
     </div>
 
@@ -75,5 +79,6 @@ $mensagem = isset($_GET['mensagem']) ? htmlspecialchars($_GET['mensagem']) : '';
             }
         }
     </script>
+    <script src="../assets/js/logout.js"></script>   
 </body>
 </html>
