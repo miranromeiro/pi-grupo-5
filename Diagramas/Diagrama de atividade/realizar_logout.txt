@@ -1,6 +1,0 @@
-@startuml  
-start 
-:Clicar em "Logout";  
-:Usuário é redirecionado para tela de login; 
-stop  
-@enduml

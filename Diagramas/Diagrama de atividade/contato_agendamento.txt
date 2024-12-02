@@ -1,5 +1,0 @@
-@startuml
-:Clicar no ícone Whatsapp;
-:Usuário é encaminhado para o\nWhatsapp do ADM;
-stop
-@enduml

@@ -1,9 +1,0 @@
-@startuml 
-start 
-:Clicar em "Estoque";
-:Abre tela de estoque;
-:Clicar em "Pesquisar"; 
-:Digitar o produto; 
-:Mostra o produto pesquisado; 
-stop 
-@enduml
