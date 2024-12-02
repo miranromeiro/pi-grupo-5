@@ -11,7 +11,7 @@ echo "
             <li><a href='home.php'>INÍCIO</a></li>
             <li><a href='agendar.php'>AGENDAR</a></li>
             <li><a href='agendados.php'>AGENDADOS</a></li>
-            <li><a href=''>ESTOQUE</a></li>
+            <li><a href='listar_produtos.php'>ESTOQUE</a></li>
             <li><a href='#' onclick='confirmLogout()'>LOGOUT</a></li>
         </ul>
     </div>

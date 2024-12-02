@@ -2,19 +2,21 @@
 <html>
 <head>
     <title>Inserir Produto</title>
-    <link rel="stylesheet" href="/pi-grupo-5/src/assets/css/style.css">
+    <link rel="stylesheet" href="/pi-grupo-5/src/assets/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Inserir Novo Produto</h1>
-        
-        <?php if (isset($_GET['erro'])): ?>
-            <div class="mensagem erro">
-                <?php echo htmlspecialchars($_GET['erro']); ?>
-            </div>
-        <?php endif; ?>
+    <?php include '../controllers/menu.php'; ?>
 
-        <form method="post" action="../../controllers/processar_produto.php">
+    <div class="container">
+        <form method="post" action="../controllers/processar_produto.php" class="formulario-produtos">
+            <h1>Inserir Novo Produto</h1>
+            
+            <?php if (isset($_GET['erro'])): ?>
+                <div class="mensagem erro">
+                    <?php echo htmlspecialchars($_GET['erro']); ?>
+                </div>
+            <?php endif; ?>
+
             <div class="form-group">
                 <label for="nome">Nome:</label>
                 <input type="text" name="nome" id="nome" required>
@@ -55,7 +57,10 @@
                 <input type="number" name="quantidade_estoque" id="quantidade_estoque" required>
             </div>
 
-            <button type="submit" class="btn btn-primary">Inserir Produto</button>
+            <div class="btn-grupo">
+                <button type="submit" class="btn btn-primary">Inserir Produto</button>
+                <a href="listar_produtos.php" class="btn">Cancelar</a>
+            </div>
         </form>
     </div>
 </body>

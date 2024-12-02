@@ -1,6 +1,6 @@
 <?php
-require '../../classes/Connection.php';
-require '../../classes/Produto.php';
+require '../classes/Connection.php';
+require '../classes/Produto.php';
 
 if (!isset($_GET['id'])) {
     header("Location: listar_produtos.php?erro=ID não fornecido");
@@ -8,14 +8,11 @@ if (!isset($_GET['id'])) {
 }
 
 try {
-    // Inicializa conexão
     $connection = new Connection();
     $conn = $connection->getConnection();
 
-    // Obtém o ID do produto
     $id = intval($_GET['id']);
 
-    // Busca produto pelo ID usando consulta parametrizada
     $sql = "SELECT * FROM produtos WHERE id = ?";
     $stmt = $conn->prepare($sql);
     $stmt->execute([$id]);
@@ -35,19 +32,21 @@ try {
 <html>
 <head>
     <title>Editar Produto</title>
-    <link rel="stylesheet" href="/pi-grupo-5/src/assets/css/style.css">
+    <link rel="stylesheet" href="/pi-grupo-5/src/assets/styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Editar Produto</h1>
-        
-        <?php if (isset($_GET['erro'])): ?>
-            <div class="mensagem erro">
-                <?php echo htmlspecialchars($_GET['erro']); ?>
-            </div>
-        <?php endif; ?>
+    <?php include '../controllers/menu.php'; ?>
 
-        <form method="post" action="../../controllers/processar_produto.php">
+    <div class="container">
+        <form method="post" action="../controllers/processar_produto.php" class="formulario-produtos">
+            <h1>Editar Produto</h1>
+            
+            <?php if (isset($_GET['erro'])): ?>
+                <div class="mensagem erro">
+                    <?php echo htmlspecialchars($_GET['erro']); ?>
+                </div>
+            <?php endif; ?>
+
             <input type="hidden" name="acao" value="editar">
             <input type="hidden" name="id" value="<?php echo htmlspecialchars($produto['id']); ?>">
 
@@ -91,8 +90,10 @@ try {
                 <input type="number" name="quantidade_estoque" id="quantidade_estoque" value="<?php echo htmlspecialchars($produto['quantidade_estoque']); ?>" required>
             </div>
 
-            <button type="submit" class="btn btn-primary">Salvar Alterações</button>
-            <a href="listar_produtos.php" class="btn">Cancelar</a>
+            <div class="btn-grupo">
+                <button type="submit" class="btn btn-primary">Salvar Alterações</button>
+                <a href="listar_produtos.php" class="btn">Cancelar</a>
+            </div>
         </form>
     </div>
 </body>

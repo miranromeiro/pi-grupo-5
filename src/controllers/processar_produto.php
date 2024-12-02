@@ -23,9 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($acao === 'editar') {
         $id = intval($_POST['id']);
         if (Produto::update($conn, $id, $dados)) {
-            header("Location: ../views/estoque/listar_produtos.php?mensagem=Produto atualizado com sucesso!");
+            header("Location: ../views/listar_produtos.php?mensagem=Produto atualizado com sucesso!");
         } else {
-            header("Location: ../views/estoque/editar.php?id=$id&erro=Erro ao atualizar produto");
+            header("Location: ../views/editar.php?id=$id&erro=Erro ao atualizar produto");
         }
     } else {
         $produto = new Produto(
@@ -40,17 +40,17 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         );
 
         if ($produto->save($conn)) {
-            header("Location: ../views/estoque/listar_produtos.php?mensagem=Produto cadastrado com sucesso!");
+            header("Location: ../views/listar_produtos.php?mensagem=Produto cadastrado com sucesso!");
         } else {
-            header("Location: ../views/estoque/inserir.php?erro=Erro ao cadastrar produto");
+            header("Location: ../views/inserir.php?erro=Erro ao cadastrar produto");
         }
     }
 } elseif ($_SERVER["REQUEST_METHOD"] == "GET" && isset($_GET['acao']) && $_GET['acao'] === 'excluir') {
     $id = intval($_GET['id']);
 
     if (Produto::delete($conn, $id)) {
-        header("Location: ../views/estoque/listar_produtos.php?mensagem=Produto excluído com sucesso!");
+        header("Location: ../views/listar_produtos.php?mensagem=Produto excluído com sucesso!");
     } else {
-        header("Location: ../views/estoque/listar_produtos.php?erro=Erro ao excluir produto");
+        header("Location: ../views/listar_produtos.php?erro=Erro ao excluir produto");
     }
 }

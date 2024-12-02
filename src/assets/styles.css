@@ -638,3 +638,127 @@
   background-color: #5bc0de; /* Botão azul */
   color: white;
 }
+
+/* Estilo específico para tabela de produtos */
+.produtos-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.1);
+}
+
+.produtos-tabela th {
+  background-color: #f8f9fa;
+  color: #333;
+  font-weight: 600;
+  padding: 12px;
+  border: 1px solid #ddd;
+  text-align: left;
+}
+
+.produtos-tabela td {
+  padding: 10px;
+  border: 1px solid #ddd;
+  transition: background-color 0.3s ease;
+}
+
+.produtos-tabela tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.produtos-tabela tr:hover {
+  background-color: #e9ecef;
+}
+
+.produtos-tabela .acoes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
+
+/* Estilos para formulários */
+.formulario-produtos {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.formulario-produtos h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.formulario-produtos .form-group {
+  margin-bottom: 15px;
+}
+
+.formulario-produtos label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+  color: #333;
+}
+
+.formulario-produtos input,
+.formulario-produtos textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s ease;
+}
+
+.formulario-produtos input:focus,
+.formulario-produtos textarea:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.formulario-produtos .btn-grupo {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Estilos específicos para botões na lista de produtos */
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  margin: 5px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary {
+  background-color: #000000;
+  color: white;
+  border: 1px solid #000000;
+}
+
+.btn-primary:hover {
+  background-color: #000000;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+  border: 1px solid #a71d2a;
+}
+
+.btn-danger:hover {
+  background-color: #a71d2a;
+}
+
+.acoes {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+}
