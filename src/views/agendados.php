@@ -27,7 +27,7 @@ $registros = $cadastro->mostra_agendamentos();
     <?php include "../controllers/menu.php"; ?>
 
     <h2 class="agendamentos__titulo">Lista de Agendamentos</h2>
-    
+    <div class="centraliza_lista_agendados">
     <table class="agendamentos__tabela">
         <thead class="agendamentos__cabecalho">
             <tr>
@@ -83,8 +83,10 @@ $registros = $cadastro->mostra_agendamentos();
 
         </tbody>
     </table>
+    </div>
 
     <script src="../assets/js/agendados.js"></script>
     <script src="../assets/js/logout.js"></script>
+    <script src="../assets/js/manipula_menu_mobile.js"></script>   
 </body>
 </html>

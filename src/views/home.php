@@ -28,5 +28,6 @@ $validador->verificar_logado();
     <h2>olá</h2>
 
     <script src="../assets/js/logout.js"></script>   
+    <script src="../assets/js/manipula_menu_mobile.js"></script>   
 </body>
 </html>
