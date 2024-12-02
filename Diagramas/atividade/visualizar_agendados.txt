@@ -1,0 +1,6 @@
+@startuml
+start
+:Clicar em "Agendados";
+:Abre tela de agendamentos realizados;
+stop
+@enduml

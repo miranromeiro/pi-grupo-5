@@ -1,0 +1,16 @@
+@startuml 
+start 
+:Clicar em "Agendar"; 
+:Abre tela de agendamento; 
+:Digitar todas as informações necessárias; 
+:Clicar em "Finalizar"; 
+if (Se os campos obrigatórios estiverem:) then (Finalizados) 
+  :agendamento realizado com sucesso; 
+  :Encaminha o usuário para\ntela de agendamento; 
+else (Não finalizados) 
+  :Mensagem: Finalize todos os campos obrigatórios!; 
+  :Retorna o usuário para tela de agendamento; 
+end 
+endif 
+stop 
+@enduml

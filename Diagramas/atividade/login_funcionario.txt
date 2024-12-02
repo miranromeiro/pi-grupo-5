@@ -1,0 +1,14 @@
+@startuml 
+start 
+:Colocar login na URL; 
+:Abre tela de login; 
+:Digitar nome de "Usuário" e "Senha" de funcionário; 
+if (Se estiver) then (Correto) 
+  :Encaminha o usuário para\ntela home; 
+else (Incorreto) 
+  :Mensagem: Usuário ou\nsenha incorretos!; 
+  :Encaminha usúario para tela de login; 
+end 
+endif 
+stop 
+ @enduml
