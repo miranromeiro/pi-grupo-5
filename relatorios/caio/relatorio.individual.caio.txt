@@ -1,0 +1,19 @@
+Integrante: Caio Beteghelli de Almeida
+Diário de bordo individual:
+29/09/2024
+Comecei a conhecer melhor cada integrante do grupo e me aproximar mais deles, um deles ja havia feito o P.I anterior comigo, então ja eramos mais próximos. Após uma conversa, foi dado inicio ao nosso projeto, apenas decidindo alguns requisitos.
+08/10/2024
+Decidimos o nome da nossa empresa, e assim, dei inicio a criação da logo, levantei algumas sugestões e ideias dos colegas e fui fazendo rascunhos.
+14/10/2024
+Finalizei a logo da empresa e entreguei para o restante do grupo. Nós de inicio haviamos pensado em uma logo mais complexa, mais elaborada, mas iria ficar muito complicado de se fazer e achei a imagem muito poluida, então optei por uma logo mais simples, apenas um "W" e um "T", as inicias da nossa empresa "Web Tech". Os demais aprovaram a logo.
+20/10/2024
+Após finalizar a logo, ja dei inicio a criação das telas do nosso sistema, no FIGMA, e na reunião de hoje vimos a segurança do nosso sistema. A segurança está OK e funcionando como imaginamos, o login leva o usuário com um cargo específico para uma área específica, onde ele só pode fazer funções limitadas, enquanto um outro usuário com outro cargo pode fazer tudo. Dei inicio a criação da tela de agendamento de serviços.
+03/11/2024
+Focamos na integração do sistema com o banco de dados e solucionamos erros que afetavam a sincronização de dados em tempo real. Adicionamos novos componentes na interface, como filtros de pesquisa nas telas de estoque, para facilitar a busca de produtos pelos funcionários.
+10/11/2024
+Hoje foi realizada uma alteração na área de estoque, colocamos algumas funções dentro dele e fomos realizando testes.
+17/11/2024
+Finalizei todas as telas do nosso trabalho, e fui dar um apoio na documentação, pois nosso prazo estava se esgotando, e ainda haviam coisas pendentes.
+30/11/2024
+Nossa última reunião, conseguimos atingir o nosso objetivo no sistema. Revisamos nosso projeto, e concluímos que o término do próprio. Nesse período de trabalho, pude aprender bastante coisa com meus colega de equipe, apesar de ter sido corrido, valeu a experiência!
+
