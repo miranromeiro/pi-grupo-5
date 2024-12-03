@@ -1,0 +1,61 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+class Usuário {
+- $db: Connection
++ _construct($dbConnection)
++ login($nome, $senha)
++ busca_id($nome, $senha)
++ logout()
++ verificar_logado()
++ logout_invasor()
+}
+
+class Agendamento {
+- $conexao: Connection
++ __construct($conexao)
++ agendar($dados)
++ mostra_agendamentos()
+}
+
+class Connection {
+- $host: string
+- $dbname: string 
+- $user: string
+- $password: string
+- $connection: PDO
++ __construct()
++ getConnection()
++ __destruct()
+}
+
+class Produtos {
+- $nome: string
+- $marca: string
+- $modelo: string
+- $aplicacao: string
+- $descricao: string
+- $preco_compra: float
+- $preco_venda: float
+- $quantidade_estoque: int
++ __construct($nome, $marca, $modelo, $aplicacao, $descricao,
+ $preco_compra, $preco_venda, $quantidade_estoque)
++ save($conn)
++ update($conn, $id, $dados)
++ delete($conn, $id)
+}
+
+class WhatsappMessage {
+- $phone: string
+- $message: string
++ __construct($phone, $message)
+- sanitizePhone($phone)
++ getWhatsAppLink()
+}
+
+Usuário ..> Connection : depende
+Agendamento ..> Connection : depende
+Produtos ..> Connection : depende
+WhatsappMessage ..> Agendamento : depende
+
+@enduml

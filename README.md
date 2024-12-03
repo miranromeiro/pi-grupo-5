@@ -5,33 +5,30 @@ _**Sistema de Gerenciamento Moto Lazer**_
 _**Para mais informações sobre a empresa responsável pelo projeto, consulte o arquivo [`empresa/README.md`](empresa/README.md).**_
 
 ## Visão Geral
-Esta é uma aplicação que visa [adicionar objetivo principal conforme definição de escopo]
-
-## Funcionalidades
-As funcionalidades previstas para este projeto incluem:
-- Funcionalidade 1
-- Funcionalidade 2
-- Funcionalidade 3
-
-## Pré-requisitos
-A ser definido conforme a escolha da tecnologia e das dependências.
-
-## Tecnologias e Instalação
-### Tecnologias
-- PHP
-- MySQL
-
-### Instalação
-A ser definido após a escolha da stack tecnológica.
-
-## Melhorias Futuras
-As seguintes funcionalidades estão sendo planejadas para implementação nas próximas fases do projeto:
-- Funcionalidade futura 1
-- Funcionalidade futura 2
+O objetivo principal é criar uma solução que simplifique e otimize os processos operacionais, como agendamento de serviços, controle de estoque de peças  e acompanhamento do histórico de veículos dos clientes.
 
 ## Autores
 - Miran Romeiro
 - Caio Beteghelli
 - Julio Marsola
 - Diogo Aureliano
+
+## Funcionalidades
+- Permitir a visualização dos produtos e serviços oferecidos pela empresa
+- Permitir a realização de um login exclusivo para funcionários
+- Permitir o gerenciamento de estoque (Visualização de produto, adição, remoção e alteração).
+- Permitir agendamento de serviços
+- Consultar histórico de serviços
+- Controle de vendas
+
+## Tecnologias
+- PHP
+- MySQL
+
+## Melhorias Futuras
+As seguintes funcionalidades estão sendo planejadas para implementação nas próximas fases do projeto:
+- 
+- 
+
+
 
