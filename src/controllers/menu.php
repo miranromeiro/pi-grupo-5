@@ -14,6 +14,9 @@ echo "
             <li><a href='listar_produtos.php'>ESTOQUE</a></li>
             <li><a href='#' onclick='confirmLogout()'>LOGOUT</a></li>
         </ul>
+        <div class='menu_imagem_mobile'id='meu_menu_bt'>
+           <img src='../assets/img/icones_comuns/menu_mobile/cardapio50.png'>
+        </div>
     </div>
 </div>
 
@@ -24,6 +27,16 @@ echo "
         <button onclick='proceedLogout()'>Sim</button>
         <button onclick='closePopup()'>Não</button>
     </div>
+</div>
+
+<div class='menu_mobile' id='meu_menu_corpo'>
+   <ul class='menu-items-mobile'>
+            <li><a href='home.php'>INÍCIO</a></li>
+            <li><a href='agendar.php'>AGENDAR</a></li>
+            <li><a href='agendados.php'>AGENDADOS</a></li>
+            <li><a href=''>ESTOQUE</a></li>
+            <li><a href='#' onclick='confirmLogout()'>LOGOUT</a></li>
+    </ul>
 </div>
 
 ";
