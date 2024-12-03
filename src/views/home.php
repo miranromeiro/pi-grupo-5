@@ -16,6 +16,7 @@ $validador->verificar_logado();
     <link rel="stylesheet" href="../assets/styles.css?v=1.0">
     </head>
 <body>
+    <div class="tela_home">
     <?php
        include "../controllers/menu.php";
 
@@ -25,7 +26,10 @@ $validador->verificar_logado();
 
        }
     ?>
-    <h2>olá</h2>
+    <div class="centraliza_img">
+        <img src="../assets/img/outras_imagens/papel_parede.png" alt="erro">
+    </div>
+    </div>
 
     <script src="../assets/js/logout.js"></script>   
     <script src="../assets/js/manipula_menu_mobile.js"></script>   

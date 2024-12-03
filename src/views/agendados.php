@@ -31,7 +31,7 @@ $registros = $cadastro->mostra_agendamentos();
     <table class="agendamentos__tabela">
         <thead class="agendamentos__cabecalho">
             <tr>
-                <th class="agendamentos__coluna-id">ID</th>
+
                 <th class="agendamentos__coluna-cliente">Nome do Cliente</th>
                 <th class="agendamentos__coluna-telefone">Telefone</th>
                 <th class="agendamentos__coluna-moto">Moto</th>
@@ -41,7 +41,7 @@ $registros = $cadastro->mostra_agendamentos();
         <tbody class="agendamentos__conteudo">
         <?php foreach (array_reverse($registros) as $registro): ?>
     <tr class="agendamentos__linha">
-        <td class="agendamentos__item-id"><?php echo $registro['id']; ?></td>
+
         <td class="agendamentos__item-cliente"><?php echo $registro['cliente_nome']; ?></td>
         <td class="agendamentos__item-telefone"><?php echo $registro['cliente_telefone']; ?></td>
         <td class="agendamentos__item-moto"><?php echo $registro['veiculo_descricao']; ?></td>
@@ -58,6 +58,7 @@ $registros = $cadastro->mostra_agendamentos();
             $data_realizada_formatada = (new DateTime($registro['created_at']))->format('d/m/Y');
 
             ?>
+            <p><strong>ID:</strong> <?php echo $registro['id']; ?></p>
             <p><strong>Descrição do Serviço:</strong> <?php echo $registro['servico_descricao']; ?></p>
             <p><strong>Estimativa de Valor:</strong> <?php echo $registro['valor_servico']; ?></p>
             <p><strong>Data Agendada:</strong> <?php echo $data_agendada_formatada; ?></p>
