@@ -19,12 +19,6 @@ $validador->verificar_logado();
     <div class="tela_home">
     <?php
        include "../controllers/menu.php";
-
-       echo "<br>";
-       if(isset($_SESSION['id_user'])){
-        echo $_SESSION['id_user'];
-
-       }
     ?>
     <div class="centraliza_img">
         <img src="../assets/img/outras_imagens/papel_parede.png" alt="erro">
