@@ -26,9 +26,10 @@ O objetivo principal é criar uma solução que simplifique e otimize os process
 - MySQL
 
 ## Melhorias Futuras
+
 As seguintes funcionalidades estão sendo planejadas para implementação nas próximas fases do projeto:
-- 
-- 
-
-
+- Implementar sugestor de produtos no estoque, baseado nos dados
+- Criar uma funcionalidade de gerenciamento de serviço (controlar status do serviço, associar produtos, funcionarios e atualizar banco de dados com os produtos utilizados) 
+- Criar uma funcionalidade de vendas (para casos de venda no varejo, sem ligação com serviço)
+- Implementar acessibilidade
 
