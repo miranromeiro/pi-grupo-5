@@ -54,7 +54,16 @@ Siga os passos abaixo para rodar o projeto localmente:
 4. **Criar o Banco de Dados**  
    - Acesse o [phpMyAdmin](http://localhost/phpmyadmin/) no navegador.  
    - Crie um banco de dados com o nome desejado (ex.: `moto_lazer`).  
-   - Execute o script SQL para criar as tabelas: **[`script_moto_lazer.sql`](script_moto_lazer.sql)**. 
+   - Execute o script SQL para criar as tabelas: **[`script_moto_lazer.sql`](script_moto_lazer.sql)**.
+   - - Crie um usuário no banco de dados e garanta os acessos necessários. Para isso:  
+     - Selecione o banco de dados criado no phpMyAdmin.  
+     - Acesse a aba "SQL" e execute os seguintes comandos:  
+       ```sql
+       CREATE USER 'user'@'localhost' IDENTIFIED BY 'senha';
+       GRANT ALL PRIVILEGES ON nome_do_banco.* TO 'user'@'localhost';
+       FLUSH PRIVILEGES;
+       ```
+     - Substitua `'user'` e `'senha'` pelo nome de usuário e senha que desejar. 
 
 5. **Configurar o Projeto**  
    - Caso necessário, edite o arquivo de configuração do banco de dados para refletir o nome do banco, usuário e senha do MySQL.  
